@@ -85,7 +85,7 @@ int cliente_ImprimirArray(Cliente *list, int len)
 	if(list != NULL && len>0)
 	{
 		retorno = 0;
-		printf("id     Nombre    Direccion    Precio     Tipo\n");
+		printf("id     Nombre    Cuit      Direccion    Localidad\n");
 		for(i=0;i<len;i++)
 		{
 			if(list[i].isEmpty == FALSE){
@@ -172,13 +172,39 @@ int cliente_BuscarPorId(Cliente *list, int len,int id)
 	return retorno;
 }
 
+/** \brief Busca por cuit entre los elementos en el array.
+*
+* \param list Cliente*
+* \param len int
+* \param id int
+* \return int Retorna (-1) si Error [longitud invalida o
+*  puntero NULL] o no existe el cuit - (posicion del cuit) si Ok
+*
+*/
+int cliente_BuscarPorCuit(Cliente *list, int len,char *cuit)
+{
+	int retorno = -1;
+	int i;
+	if(list!=NULL && len > 0 )
+	{
+		for(i=0;i<len;i++){
+			if(list[i].isEmpty == FALSE && strncmp(list[i].cuit,cuit, 50) == 0)
+			{
+				retorno = i;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
 /** \brief Genera un alta con un id automatico.
 *
 * \param list Cliente*
 * \param len int
 * \param item Cliente
 * \return int Retorna (-1) si Error [longitud invalida o
-*  puntero NULL] - (0) si Ok
+*  puntero NULL] - (id del alta) si Ok
 *
 */
 int cliente_AltaPorId(Cliente *list, int len, Cliente item)
@@ -193,7 +219,7 @@ int cliente_AltaPorId(Cliente *list, int len, Cliente item)
 			list[index] = item;
 			list[index].isEmpty = FALSE;
 			list[index].id = generarId();
-			retorno = 0;
+			retorno = list[index].id;
 		}
 	}
 	return retorno;
@@ -249,6 +275,16 @@ int cliente_ModificarPorId(Cliente *list, int len,Cliente item)
 	return retorno;
 }
 
+/** \brief Retorno en el parametro buffer el elemento
+*  que coincide con el id pasado en buffer.
+*
+* \param list Cliente*
+* \param len int
+* \param buffer Cliente*
+* \return int Retorna (-1) si Error [longitud invalida o
+*  puntero NULL] - (0) si Ok
+*
+*/
 int cliente_GetPorId(Cliente *list, int len, Cliente *buffer)
 {
 	int retorno = -1;

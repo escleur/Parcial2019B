@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;parcial2019b/src/Informe&apos; to &apos;Informe.c&apos;" description="Rename resource &apos;Informe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Informe" name="Informe.c" stamp="1570825450425" updateReferences="true"/>
+</session>

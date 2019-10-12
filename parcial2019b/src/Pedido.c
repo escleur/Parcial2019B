@@ -85,11 +85,11 @@ int pedido_ImprimirArray(Pedido *list, int len)
 	if(list != NULL && len>0)
 	{
 		retorno = 0;
-		printf("id     Cantidad    Estado     HDPE      LDPE          PP         id cliente\n");
+		printf("id     Cantidad total    Estado     HDPE      LDPE          PP         id cliente\n");
 		for(i=0;i<len;i++)
 		{
 			if(list[i].isEmpty == FALSE){
-				printf("%d -- %d -- %s -- %d-- %d-- %d-- %d \n",list[i].id,list[i].cantidad,list[i].estado,list[i].claseA,list[i].claseB,list[i].claseC, list[i].idCliente);
+				printf("%d -- %d -- %s -- %d -- %d -- %d -- %d \n",list[i].id,list[i].cantidad,list[i].estado,list[i].claseA,list[i].claseB,list[i].claseC, list[i].idCliente);
 			}
 
 		}
@@ -249,6 +249,16 @@ int pedido_ModificarPorId(Pedido *list, int len,Pedido item)
 	return retorno;
 }
 
+/** \brief Retorno en el parametro buffer el elemento
+*  que coincide con el id pasado en buffer.
+*
+* \param list Pedido*
+* \param len int
+* \param buffer Pedido*
+* \return int Retorna (-1) si Error [longitud invalida o
+*  puntero NULL] - (0) si Ok
+*
+*/
 int pedido_GetPorId(Pedido *list, int len, Pedido *buffer)
 {
 	int retorno = -1;

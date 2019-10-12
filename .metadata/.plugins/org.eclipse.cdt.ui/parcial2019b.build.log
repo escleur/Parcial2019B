@@ -1,0 +1,20 @@
+01:10:38 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+
+01:10:38 Build Finished (took 107ms)
+

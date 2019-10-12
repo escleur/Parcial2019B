@@ -23,7 +23,6 @@ typedef struct
 	char direccion[50];
 	char cuit[50];
 	char localidad[50];
-	int tipo;
 } Cliente;
 
 int cliente_InitLugarLibre(Cliente *list, int len);
@@ -33,6 +32,7 @@ int cliente_OrdenarArray(Cliente *list, int len, int orden);
 
 int cliente_BuscarLugarLibre(Cliente *list, int len);
 int cliente_BuscarPorId(Cliente *list, int len,int id);
+int cliente_BuscarPorCuit(Cliente *list, int len,char *cuit);
 int cliente_AltaPorId(Cliente *list, int len, Cliente item);
 int cliente_BajaPorId(Cliente *list, int len,int id);
 int cliente_ModificarPorId(Cliente *list, int len,Cliente item);
