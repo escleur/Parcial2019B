@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
-<window height="921" width="1920" x="-3" y="176">
+<window height="921" width="1920" x="-41" y="68">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -35,17 +35,18 @@
 <part id="1"/>
 <part id="3"/>
 <part id="2"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/gabriel/programacion1clases/Parcial2019B/parcial2019b/src/main.c" title="main.c" tooltip="parcial2019b/src/main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/gabriel/programacion1clases/Parcial2019B/parcial2019b/src/main.c" title="main.c" tooltip="parcial2019b/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parcial2019b/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="3452" selectionTopPixel="140"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="3452" selectionTopPixel="17"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Pedido.c" partName="Pedido.c" path="/home/gabriel/programacion1clases/Parcial2019B/parcial2019b/src/Pedido.c" title="Pedido.c" tooltip="parcial2019b/src/Pedido.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parcial2019b/src/Pedido.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4089" selectionTopPixel="4222"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4089" selectionTopPixel="4148"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="UI.c" partName="UI.c" path="/home/gabriel/programacion1clases/Parcial2019B/parcial2019b/src/UI.c" title="UI.c" tooltip="parcial2019b/src/UI.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parcial2019b/src/UI.c"/>
@@ -57,7 +58,11 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Cliente.c" partName="Cliente.c" path="/home/gabriel/programacion1clases/Parcial2019B/parcial2019b/src/Cliente.c" title="Cliente.c" tooltip="parcial2019b/src/Cliente.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parcial2019b/src/Cliente.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="256" selectionOffset="5476" selectionTopPixel="4565"/>
+<editorState selectionHorizontalPixel="0" selectionLength="256" selectionOffset="5476" selectionTopPixel="4488"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Pedido.h" partName="Pedido.h" path="/home/gabriel/programacion1clases/Parcial2019B/parcial2019b/src/Pedido.h" title="Pedido.h" tooltip="parcial2019b/src/Pedido.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/parcial2019b/src/Pedido.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="147" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -282,16 +287,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/parcial2019b/src/Pedido.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/parcial2019b/src/Cliente.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/parcial2019b/src/UI.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/parcial2019b/src/Cliente.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/parcial2019b/src/Pedido.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/parcial2019b/src/Pedido.h"/>
 </editors>
-<item historyLabel="Informe.c" index="3">
-<position/>
-</item>
-<item historyLabel="Cliente.c" index="4">
-<position info="not_deleted" x="5736" y="57"/>
-</item>
-<item historyLabel="Informe.c" index="3">
-<position/>
-</item>
 <item historyLabel="Informe.h" index="2">
 <position info="not_deleted" x="606" y="0"/>
 </item>
@@ -430,8 +429,17 @@
 <item historyLabel="Informe.c" index="3">
 <position info="not_deleted" x="892" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="1">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="2846" y="0"/>
+</item>
+<item historyLabel="Cliente.c" index="8">
+<position info="not_deleted" x="5476" y="256"/>
+</item>
+<item historyLabel="Pedido.c" index="9">
+<position info="not_deleted" x="4089" y="0"/>
+</item>
+<item active="true" historyLabel="Pedido.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -450,11 +458,11 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Cliente.h" tooltip="parcial2019b/src/Cliente.h">
-<persistable path="/parcial2019b/src/Cliente.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Pedido.h" tooltip="parcial2019b/src/Pedido.h">
 <persistable path="/parcial2019b/src/Pedido.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Cliente.h" tooltip="parcial2019b/src/Cliente.h">
+<persistable path="/parcial2019b/src/Cliente.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Cliente.c" tooltip="parcial2019b/src/Cliente.c">
 <persistable path="/parcial2019b/src/Cliente.c"/>
