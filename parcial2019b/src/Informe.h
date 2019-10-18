@@ -17,9 +17,15 @@
 #include "utn.h"
 #include "UI.h"
 
-int pedido_contarPendientesPorCliente(Pedido *list,int len, int idCliente);
+int pedido_contarPorCliente(Pedido *list,int len, int idCliente, char *estado);
 int cliente_ImprimirArrayConPendientes(Cliente *list, int len, Pedido *list2, int len2);
 int pedido_ImprimirArrayPendiente(Cliente *list, int len, Pedido *list2, int len2);
 int pedido_ImprimirArrayProcesado(Cliente *list, int len, Pedido *list2, int len2);
+int cliente_ConMasPedidosPendientes(Cliente *list, int len, Pedido *list2, int len2);
+int cliente_ConMasPedidosCompletados(Cliente *list, int len, Pedido *list2, int len2);
+int cliente_ConMasPedidos(Cliente *list, int len, Pedido *list2, int len2);
+int pedido_contarRecicladoPorCliente(Pedido *list,int len, int idCliente);
+int cliente_ConMasReciclado(Cliente *list, int len, Pedido *list2, int len2);
+int cliente_ConMenosReciclado(Cliente *list, int len, Pedido *list2, int len2);
 
 #endif /* INFORME_H_ */

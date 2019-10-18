@@ -1,157 +1,51 @@
-19:31:40 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/Informe.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
-Finished building: ../src/Informe.c
- 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-19:31:46 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-make: Nothing to be done for `all'.
-22:24:04 **** Incremental Build of configuration Debug for project parcial2019b ****
+19:38:14 **** Incremental Build of configuration Debug for project parcial2019b ****
 make all 
 Building file: ../src/Cliente.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.d" -o "src/Cliente.o" "../src/Cliente.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.o" -o "src/Cliente.o" "../src/Cliente.c"
 Finished building: ../src/Cliente.c
  
 Building file: ../src/Informe.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
-Finished building: ../src/Informe.c
- 
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
- 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-22:28:39 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-../src/UI.c: In function ‘cliente_UIAlta’:
-../src/UI.c:60:4: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [enabled by default]
-    printf(cliente_BuscarPorCuit(list, len, buffer.cuit));
-    ^
-In file included from ../src/UI.c:7:0:
-/usr/include/stdio.h:362:12: note: expected ‘const char * __restrict__’ but argument is of type ‘int’
- extern int printf (const char *__restrict __format, ...);
-            ^
-../src/UI.c:60:4: warning: format not a string literal and no format arguments [-Wformat-security]
-    printf(cliente_BuscarPorCuit(list, len, buffer.cuit));
-    ^
-Finished building: ../src/UI.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-22:30:17 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-22:31:51 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/Cliente.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.d" -o "src/Cliente.o" "../src/Cliente.c"
-Finished building: ../src/Cliente.c
- 
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-22:39:51 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/Cliente.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.d" -o "src/Cliente.o" "../src/Cliente.c"
-Finished building: ../src/Cliente.c
- 
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-../src/UI.c: In function ‘cliente_UIAlta’:
-../src/UI.c:96:4: error: expected ‘;’ before ‘if’
-    if(id >= 0) {
-    ^
-../src/UI.c:22:6: warning: variable ‘id’ set but not used [-Wunused-but-set-variable]
-  int id;
-      ^
-make: *** [src/UI.o] Error 1
-22:40:08 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/UI.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
-Finished building: ../src/UI.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-23:53:07 **** Incremental Build of configuration Debug for project parcial2019b ****
-make all 
-Building file: ../src/Cliente.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.d" -o "src/Cliente.o" "../src/Cliente.c"
-Finished building: ../src/Cliente.c
- 
-Building file: ../src/Informe.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
 Finished building: ../src/Informe.c
  
 Building file: ../src/Pedido.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pedido.d" -MT"src/Pedido.d" -o "src/Pedido.o" "../src/Pedido.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Pedido.d" -MT"src/Pedido.o" -o "src/Pedido.o" "../src/Pedido.c"
 Finished building: ../src/Pedido.c
  
 Building file: ../src/UI.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.d" -o "src/UI.o" "../src/UI.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UI.d" -MT"src/UI.o" -o "src/UI.o" "../src/UI.c"
 Finished building: ../src/UI.c
  
 Building file: ../src/main.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.o" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+
+19:38:15 Build Finished. 0 errors, 0 warnings. (took 1s.348ms)
+
+19:38:23 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+make: No se hace nada para 'all'.
+19:39:40 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 Finished building: ../src/main.c
  
 Building target: parcial2019b
@@ -159,16 +53,204 @@ Invoking: GCC C Linker
 gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
 Finished building target: parcial2019b
  
-01:10:38 **** Incremental Build of configuration Debug for project parcial2019b ****
+19:40:58 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+19:42:41 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+19:47:35 **** Incremental Build of configuration Debug for project parcial2019b ****
 make all 
 Building file: ../src/Informe.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+19:49:57 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+19:53:52 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
 Finished building: ../src/Informe.c
  
 Building file: ../src/main.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+19:55:06 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+20:02:01 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+20:20:06 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+20:29:04 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+20:40:08 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+20:42:49 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+20:45:49 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+Finished building: ../src/Informe.c
+ 
+Building target: parcial2019b
+Invoking: GCC C Linker
+gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
+Finished building target: parcial2019b
+ 
+21:06:46 **** Incremental Build of configuration Debug for project parcial2019b ****
+make all 
+Building file: ../src/Informe.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.o" -o "src/Informe.o" "../src/Informe.c"
+../src/Informe.c: In function ‘cliente_ConMasDe1000Reciclado’:
+../src/Informe.c:398:10: warning: unused variable ‘clienteMaximo’ [-Wunused-variable]
+  Cliente clienteMaximo;
+          ^~~~~~~~~~~~~
+../src/Informe.c:396:6: warning: unused variable ‘maximoPedidos’ [-Wunused-variable]
+  int maximoPedidos=0;
+      ^~~~~~~~~~~~~
+../src/Informe.c:394:6: warning: unused variable ‘flagPrimero’ [-Wunused-variable]
+  int flagPrimero = 1;
+      ^~~~~~~~~~~
+Finished building: ../src/Informe.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:105:5: warning: implicit declaration of function ‘cliente_ConMasDe1000Reciclado’ [-Wimplicit-function-declaration]
+     cliente_ConMasDe1000Reciclado(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Finished building: ../src/main.c
  
 Building target: parcial2019b

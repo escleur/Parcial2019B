@@ -26,6 +26,7 @@ int main(void) {
 	Cliente aClientes[QTY_CLIENTES];
 	Pedido aPedidos[QTY_PEDIDOS];
 	int opcion;
+	char opcion2;
 	cliente_InitLugarLibre(aClientes, QTY_CLIENTES);
 	pedido_InitLugarLibre(aPedidos, QTY_PEDIDOS);
 	clienteCargaForzada(aClientes,QTY_CLIENTES);
@@ -39,6 +40,7 @@ int main(void) {
 				"6. Listado clientes con sus pendientes\n"
 				"7. Listado de pedidos pendientes\n"
 				"8. Listado de pedidos procesados\n"
+				"9. Informes\n"
 				"0. Salir\n");
 		getInt(&opcion, "Ingrese la opcion\n", "Error\n", 0, 11, 2);
 		switch(opcion)
@@ -68,11 +70,47 @@ int main(void) {
 		case 8:
 			pedido_ImprimirArrayProcesado(aClientes , QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
 			break;
+		case 9:
+			printf( "a. Informe cliente con mas pedidos pendientes\n"
+					"b. Informe cliente con mas pedidos completados\n"
+					"c. Informe cliente con mas pedidos\n"
+					"d. Informe cliente con mas kilos reciclados\n"
+					"e. Informe cliente con menos kilos reciclados\n"
+					"f. \n"
+					"g. \n"
+					"h. \n"
+					"\n");
+			getChar(&opcion2, "Ingrese la opcion\n", "Error\n", 'a', 'h', 2);
+			switch(opcion2)
+			{
+			case 'a':
+				cliente_ConMasPedidosPendientes(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+				break;
+			case 'b':
+				cliente_ConMasPedidosCompletados(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+				break;
+			case 'c':
+				cliente_ConMasPedidos(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+
+				break;
+			case 'd':
+				cliente_ConMasReciclado(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+
+				break;
+			case 'e':
+				cliente_ConMenosReciclado(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+
+				break;
+			case 'f':
+				cliente_ConMasDe1000Reciclado(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+				break;
+			}
+			break;
+
 		}
 	}while(opcion!=0);
 	return 0;
 }
-
 /**
  * \brief Carga forzada de datos para la entidad Cliente
  * \param list Cliente*
@@ -80,10 +118,10 @@ int main(void) {
  */
 void clienteCargaForzada(Cliente *list, int len)
 {
-	char aNombre[][QTY_CARACTERES]={"Los tipos","Corintia","Angeles","Corus","La Sonata","Emilio"};
-	char aCuit[][QTY_CARACTERES]={"32-83283284-3","18-95375743-5","17-23178762-3","20-23298383-5","23-21898839-4","20-34558439-8"};
-	char aDireccion[][QTY_CARACTERES]={"tacuari ","chile","independencia","chacabuco","chile","independencia"};
-	char aLocalidad[][QTY_CARACTERES]={"Nuñes","Martines","Lomas","Devoto","Chacarita","Lomas"};
+	char aNombre[][QTY_CARACTERES]={"Telefonica","DATASOFT","NESTLE","TERRABUSI","DIA","QUILMES"};
+	char aCuit[][QTY_CARACTERES]={"30-11223344-5","30-44556677-6","30-88995521-9","30-56781423-5","31-54581253-3","30-51485759-6"};
+	char aDireccion[][QTY_CARACTERES]={"Lima 1234","Corrientes 2547","cucha cucha 555","rocha 784","Mitre 750","rocha 741"};
+	char aLocalidad[][QTY_CARACTERES]={"CABA","CABA","LANUS","QUILMES","AVELLANEDA","QUILMES"};
 	Cliente buffer;
 	int i;
 	for(i=0;i<6;i++){
@@ -104,12 +142,12 @@ void clienteCargaForzada(Cliente *list, int len)
  */
 void pedidoCargaForzada(Pedido *list, int len)
 {
-	int aCantidad[]={1000,100,150,10,1000,400,390,1000,390,2000,200};
-	char aEstado[][QTY_CARACTERES]={"Pendiente","Completado","Completado","Pendiente","Pendiente","Pendiente","Pendiente","Pendiente","Pendiente","Pendiente","Pendiente"};
-	int aClaseA[]={0,10,100,0,0,0,0,0,0,0,0};
-	int aClaseB[]={0,80,50,0,0,0,0,0,0,0,0};
-	int aClaseC[]={0,10,0,0,0,0,0,0,0,0,0};
-	int aIdCliente[]={1,4,2,4,1,6,3,3,1,3,6};
+	int aIdCliente[]={1,1,2,2,3,4,1,5,6};
+	int aCantidad[]={1000,800,100,300,1500,750,200,30,456};
+	int aClaseA[]={200,210,0,0,500,100,0,10,0};
+	int aClaseB[]={145,45,0,0,150,50,0,5,0};
+	int aClaseC[]={230,30,0,0,270,70,0,3,0};
+	char aEstado[][QTY_CARACTERES]={"Completado","Completado","Pendiente","Pendiente","Completado","Completado","Pendiente","Completado","Pendiente"};
 	Pedido buffer;
 	int i;
 	for(i=0;i<11;i++){
@@ -123,7 +161,6 @@ void pedidoCargaForzada(Pedido *list, int len)
 	}
 
 }
-
 
 
 
