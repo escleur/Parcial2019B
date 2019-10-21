@@ -575,13 +575,13 @@ int pedido_PlasticoPorCliente(Pedido *list,int len, int idCliente, int clase)
 			if(list[i].isEmpty == FALSE && list[i].idCliente == idCliente && strncmp(list[i].estado,"Completado",50)==0){
 				switch(clase){
 				case 1:
-					acumulador += list[i].claseA;
+					acumulador = list[i].claseA;
 					break;
 				case 2:
-					acumulador += list[i].claseB;
+					acumulador = list[i].claseB;
 					break;
 				case 3:
-					acumulador += list[i].claseC;
+					acumulador = list[i].claseC;
 				}
 			}
 		}
@@ -603,7 +603,10 @@ int pedido_PlasticoPorCliente(Pedido *list,int len, int idCliente, int clase)
 */
 int cliente_CantidadDePlasticoReciclado(Cliente *list, int len, Pedido *list2, int len2)
 {
+	int i;
 	int retorno = -1;
+	int acumulador = 0;
+	int contador = 0;
 	char cuit[50];
 	int clase;
 	int index;
@@ -613,9 +616,9 @@ int cliente_CantidadDePlasticoReciclado(Cliente *list, int len, Pedido *list2, i
 				"Error", 1, 49, 2) == -1) {
 			printf("Error en el cuit\n");
 		}else{
-			if(cliente_BuscarPorCuit(list, len, cuit)== -1)
+			if(cliente_BuscarPorCuit(list, len, cuit)!= -1)
 			{
-				printf("Error el cuit no existe\n");
+				printf("Error el cuit ya existe\n");
 			}else{
 				if(getInt(&clase,"Ingrese el plastico a mostrar 1. HDPE 2. LDPE 3. PP4", "Error",1,3,2)== -1){
 					printf("Error al elejir el plastico");
@@ -630,6 +633,16 @@ int cliente_CantidadDePlasticoReciclado(Cliente *list, int len, Pedido *list2, i
 			}
 
 		}
+		retorno = 0;
+		for(i=0;i<len;i++)
+		{
+			if(list[i].isEmpty == FALSE){
+
+				contador++;
+			}
+		}
+		printf("%d\n",acumulador/contador );
+
 	}
 	return retorno;
 }

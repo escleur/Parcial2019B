@@ -391,8 +391,11 @@ int cliente_ConMasDe1000Reciclado(Cliente *list, int len, Pedido *list2, int len
 {
 	int i;
 	int retorno = -1;
+	int flagPrimero = 1;
 	int cantidad;
+	int maximoPedidos=0;
 	int contador = 0;
+	Cliente clienteMaximo;
 	if(list != NULL && len>0 && list2 != NULL && len2 > 0)
 	{
 		retorno = 0;
@@ -427,8 +430,11 @@ int cliente_ConMenosDe100Reciclado(Cliente *list, int len, Pedido *list2, int le
 {
 	int i;
 	int retorno = -1;
+	int flagPrimero = 1;
 	int cantidad;
+	int maximoPedidos=0;
 	int contador = 0;
+	Cliente clienteMaximo;
 	if(list != NULL && len>0 && list2 != NULL && len2 > 0)
 	{
 		retorno = 0;
@@ -467,168 +473,19 @@ int pedido_CompletadosConPorcentajeReciclado(Cliente *list, int len, Pedido *lis
 	int retorno = -1;
 	int porcentaje;
 	Cliente buffer;
+	Cliente clienteMaximo;
 	if(list != NULL && len>0 && list2 != NULL && len2 > 0)
 	{
 		retorno = 0;
-		printf("id de pedido   cuit de cliente   Porcentaje reciclado\n");
 		for(i=0;i<len2;i++)
 		{
-			if(list2[i].isEmpty == FALSE && strncmp(list2[i].estado,"Completado",50)==0){
-
+			if(list2[i].isEmpty == FALSE){
 				buffer.id =  list2[i].idCliente;
-				cliente_GetPorId(list, len, &buffer);
+				cliente_GetPorId(list2, len2, &buffer);
 				porcentaje = (list2[i].claseA+list2[i].claseB+list2[i].claseC)*100/list2[i].cantidad;
-				printf("%d   %s   %d\n",list2[i].id,buffer.cuit,porcentaje );
+				printf("id de pedido   cuit de cliente   Porcentaje reciclado\n");
+				printf("%d   %s   %f\n",list2[i].id,buffer.cuit,porcentaje );
 			}
-		}
-	}
-	return retorno;
-}
-
-/** \brief Imprime los pedidos pendientes por localidad
-*
-* \param list Cliente*
-* \param len int
-* \param list2 Pedido*
-* \param len2 int
-* \return int Retorna (-1) si Error [longitud invalida o
-*  puntero NULL] - (0) si Ok
-*
-*/
-int pedido_PendientesPorLocalidad(Cliente *list, int len, Pedido *list2, int len2)
-{
-	int i;
-	int retorno = -1;
-	int acumulador = 0;
-
-	Cliente buffer;
-	if(list != NULL && len>0 && list2 != NULL && len2 > 0)
-	{
-		if (getString(buffer.localidad, "Ingrese la localidad\n",
-				"Error", 1, 49, 2) == -1) {
-			printf("Error en la localidad\n");
-		}else{
-			retorno = 0;
-			printf("Cantidad de pedidos pendientes en la localidad\n");
-			for(i=0;i<len;i++)
-			{
-				if(list[i].isEmpty == FALSE && strncmp(list[i].localidad,buffer.localidad,50)==0){
-					acumulador += pedido_contarPorCliente(list2, len2, list[i].id,"Pendiente");
-
-				}
-			}
-			printf("%d\n",acumulador );
-
-		}
-	}
-	return retorno;
-}
-/** \brief Imprime el promedio de polipropileno por cliente
-*
-* \param list Cliente*
-* \param len int
-* \param list2 Pedido*
-* \param len2 int
-* \return int Retorna (-1) si Error [longitud invalida o
-*  puntero NULL] - (0) si Ok
-*
-*/
-int cliente_PPPromedio(Cliente *list, int len, Pedido *list2, int len2)
-{
-	int i;
-	int retorno = -1;
-	int acumulador = 0;
-	int contador = 0;
-	if(list != NULL && len>0 && list2 != NULL && len2 > 0)
-	{
-		retorno = 0;
-		printf("Promedio de polipropileno por cliente\n");
-		for(i=0;i<len;i++)
-		{
-			if(list[i].isEmpty == FALSE){
-
-				acumulador += pedido_PlasticoPorCliente(list2, len2, list[i].id, 3);
-				contador++;
-			}
-		}
-		printf("%d\n",acumulador/contador );
-
-	}
-	return retorno;
-}
-
-/**
- * \brief Cuenta cantidad de reciclado de una de las 3 clases de plastico por cliente
- * \param list Pedido*
- * \param len int
- * \param idCliente int
- * \return (-1)si puntero NULL o parametros incorrectos (>= 0) cantidad correspondiente
- */
-
-int pedido_PlasticoPorCliente(Pedido *list,int len, int idCliente, int clase)
-{
-	int retorno = -1;
-	int i;
-	int acumulador = 0;
-	if(list != NULL && len >= 0 && idCliente >= 0 && clase >=1 && clase <= 3){
-		for(i=0; i<len; i++){
-			if(list[i].isEmpty == FALSE && list[i].idCliente == idCliente && strncmp(list[i].estado,"Completado",50)==0){
-				switch(clase){
-				case 1:
-					acumulador += list[i].claseA;
-					break;
-				case 2:
-					acumulador += list[i].claseB;
-					break;
-				case 3:
-					acumulador += list[i].claseC;
-				}
-			}
-		}
-		retorno = acumulador;
-	}
-
-	return retorno;
-}
-
-/** \brief Imprime el promedio de polipropileno por cliente
-*
-* \param list Cliente*
-* \param len int
-* \param list2 Pedido*
-* \param len2 int
-* \return int Retorna (-1) si Error [longitud invalida o
-*  puntero NULL] - (0) si Ok
-*
-*/
-int cliente_CantidadDePlasticoReciclado(Cliente *list, int len, Pedido *list2, int len2)
-{
-	int retorno = -1;
-	char cuit[50];
-	int clase;
-	int index;
-	if(list != NULL && len>0 && list2 != NULL && len2 > 0)
-	{
-		if (getCuil(cuit, "Ingrese el cuit\n",
-				"Error", 1, 49, 2) == -1) {
-			printf("Error en el cuit\n");
-		}else{
-			if(cliente_BuscarPorCuit(list, len, cuit)== -1)
-			{
-				printf("Error el cuit no existe\n");
-			}else{
-				if(getInt(&clase,"Ingrese el plastico a mostrar 1. HDPE 2. LDPE 3. PP4", "Error",1,3,2)== -1){
-					printf("Error al elejir el plastico");
-				}else{
-					retorno = 0;
-					index = cliente_BuscarPorCuit(list, len, cuit);
-					printf("Plastico reciclado por cliente\n");
-					printf("%dkg\n ",pedido_PlasticoPorCliente(list2, len2, list[index].id, clase));
-
-				}
-
-			}
-
 		}
 	}
 	return retorno;

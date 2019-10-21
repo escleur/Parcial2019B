@@ -80,8 +80,8 @@ int main(void) {
 					"g. Informe clientes con menos de 100 kilos reciclados\n"
 					"h. Informe pedidos completados con porcentaje de reciclado\n"
 					"i. Informe cantidad de pedidos pendientes por localidad\n"
-					"j. Informe promedio de polipropileno por cliente\n"
-					"k. Informe cantidad de plastico por cliente\n"
+					"j. \n"
+					"k. \n"
 					"\n");
 			getChar(&opcion2, "Ingrese la opcion\n", "Error\n", 'a', 'k', 2);
 			switch(opcion2)
@@ -120,7 +120,7 @@ int main(void) {
 				cliente_PPPromedio(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
 				break;
 			case 'k':
-				cliente_CantidadDePlasticoReciclado(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
+				//pedido_(aClientes, QTY_CLIENTES, aPedidos, QTY_PEDIDOS);
 				break;
 			}
 			break;

@@ -32,6 +32,6 @@ int cliente_ConMenosDe100Reciclado(Cliente *list, int len, Pedido *list2, int le
 int pedido_CompletadosConPorcentajeReciclado(Cliente *list, int len, Pedido *list2, int len2);
 int pedido_PendientesPorLocalidad(Cliente *list, int len, Pedido *list2, int len2);
 int cliente_PPPromedio(Cliente *list, int len, Pedido *list2, int len2);
-int pedido_PlasticoPorCliente(Pedido *list,int len, int idCliente, int clase);
+int pedido_PlasticoPorCliente(Pedido *list,int len, int idCliente);
 int cliente_CantidadDePlasticoReciclado(Cliente *list, int len, Pedido *list2, int len2);
 #endif /* INFORME_H_ */

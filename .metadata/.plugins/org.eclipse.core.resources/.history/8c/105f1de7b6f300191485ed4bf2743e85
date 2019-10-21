@@ -575,13 +575,13 @@ int pedido_PlasticoPorCliente(Pedido *list,int len, int idCliente, int clase)
 			if(list[i].isEmpty == FALSE && list[i].idCliente == idCliente && strncmp(list[i].estado,"Completado",50)==0){
 				switch(clase){
 				case 1:
-					acumulador += list[i].claseA;
+					acumulador = list[i].claseA;
 					break;
 				case 2:
-					acumulador += list[i].claseB;
+					acumulador = list[i].claseB;
 					break;
 				case 3:
-					acumulador += list[i].claseC;
+					acumulador = list[i].claseC;
 				}
 			}
 		}
