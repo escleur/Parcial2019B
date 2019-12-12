@@ -269,7 +269,7 @@ int ca_setReservado(Cachorro* this,char* reservado)
 	int retorno = -1;
 	if(this!=NULL && isValidReservado(reservado)){
 		retorno = 0;
-		strncpy(this->reservado, reservado,3);
+		strncpy(this->raza, reservado,3);
 	}
 	return retorno;
 }

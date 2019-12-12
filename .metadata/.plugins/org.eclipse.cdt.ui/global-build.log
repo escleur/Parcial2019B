@@ -1,44 +1,55 @@
-00:51:34 **** Incremental Build of configuration Debug for project parcial2019b ****
+00:30:01 **** Build of configuration Debug for project segundoParcial2019 ****
 make all 
-Building file: ../src/Informe.c
+Building file: ../src/Cachorro.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
-Finished building: ../src/Informe.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cachorro.d" -MT"src/Cachorro.d" -o "src/Cachorro.o" "../src/Cachorro.c"
+Finished building: ../src/Cachorro.c
+ 
+Building file: ../src/Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.d" -o "src/Controller.o" "../src/Controller.c"
+Finished building: ../src/Controller.c
+ 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.d" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
  
 Building file: ../src/main.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 Finished building: ../src/main.c
  
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.d" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
  
-00:51:47 **** Incremental Build of configuration Debug for project parcial2019b ****
+Building file: ../src/utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utn.d" -MT"src/utn.d" -o "src/utn.o" "../src/utn.c"
+Finished building: ../src/utn.c
+ 
+Building target: segundoParcial2019
+Invoking: GCC C Linker
+gcc  -o "segundoParcial2019"  ./src/Cachorro.o ./src/Controller.o ./src/LinkedList.o ./src/main.o ./src/parser.o ./src/utn.o   
+Finished building target: segundoParcial2019
+ 
+00:30:04 **** Incremental Build of configuration Debug for project segundoParcial2019 ****
 make all 
 make: Nothing to be done for `all'.
-00:54:09 **** Incremental Build of configuration Debug for project parcial2019b ****
+00:31:24 **** Incremental Build of configuration Debug for project segundoParcial2019 ****
 make all 
-Building file: ../src/Informe.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
-Finished building: ../src/Informe.c
- 
-Building target: parcial2019b
-Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
- 
-00:57:40 **** Incremental Build of configuration Debug for project parcial2019b ****
+make: Nothing to be done for `all'.
+00:47:31 **** Incremental Build of configuration Debug for project segundoParcial2019 ****
 make all 
-Building file: ../src/Informe.c
+Building file: ../src/Cachorro.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Informe.d" -MT"src/Informe.d" -o "src/Informe.o" "../src/Informe.c"
-Finished building: ../src/Informe.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cachorro.d" -MT"src/Cachorro.d" -o "src/Cachorro.o" "../src/Cachorro.c"
+Finished building: ../src/Cachorro.c
  
-Building target: parcial2019b
+Building target: segundoParcial2019
 Invoking: GCC C Linker
-gcc  -o "parcial2019b"  ./src/Cliente.o ./src/Informe.o ./src/Pedido.o ./src/UI.o ./src/main.o ./src/utn.o   
-Finished building target: parcial2019b
+gcc  -o "segundoParcial2019"  ./src/Cachorro.o ./src/Controller.o ./src/LinkedList.o ./src/main.o ./src/parser.o ./src/utn.o   
+Finished building target: segundoParcial2019
  

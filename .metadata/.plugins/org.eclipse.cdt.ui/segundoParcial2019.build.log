@@ -1,0 +1,15 @@
+00:47:31 **** Incremental Build of configuration Debug for project segundoParcial2019 ****
+make all 
+Building file: ../src/Cachorro.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cachorro.d" -MT"src/Cachorro.d" -o "src/Cachorro.o" "../src/Cachorro.c"
+Finished building: ../src/Cachorro.c
+ 
+Building target: segundoParcial2019
+Invoking: GCC C Linker
+gcc  -o "segundoParcial2019"  ./src/Cachorro.o ./src/Controller.o ./src/LinkedList.o ./src/main.o ./src/parser.o ./src/utn.o   
+Finished building target: segundoParcial2019
+ 
+
+00:47:31 Build Finished (took 112ms)
+
